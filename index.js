@@ -9,19 +9,22 @@ class Formatter {
   }
 
 
- static titleize(str) {
-   let word = ["the", "a", "an", "but", "of", "and", "for", "at", "by","from"]
-   let res = [];
-   let arr = str.split(' ')
-   for (let i = 0; i < arr.length; i++) {
-     if(i = 0) {
-       res.push(this.capitalize(arr[i]))
-     } else if(word.includes(arr[i])) {
-       res.push(arr[i])
-     } else {
-       res.push(this.capitalize(arr[i]))
+  static titleize(str) {
+     let word = [ 'the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from' ]
+     let res = [];
+     let arr = str.split( " " )
+     for ( let i = 0; i < arr.length; i++ ) {
+       if ( n == 0 ) {
+         res.push( this.capitalize(arr[i]))
+       } else {
+         if (word.includes(arr[i])) {
+           res.push(arr[i])
+         } else {
+           result.push(this.capitalize(arr[i]))
+         }
+       }
+
      }
+     return result.join( " " );
    }
-    return res.join(' ');
- }
  }
