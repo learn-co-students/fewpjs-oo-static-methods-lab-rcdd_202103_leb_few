@@ -5,13 +5,13 @@ class Formatter {
   }
 
   static sanitize(str) {
-    return str.replace(/[^A-Za-z0-9 '-]/g,'');
+    return str.replace( /[^A-Za-z0-9 '-]/g, '' );
   }
 
 
  static titleize(str) {
    let word = ["the", "a", "an", "but", "of", "and", "for", "at", "by","from"]
-   let res = []
+   let res = [];
    let arr = str.split(' ')
    for (let i = 0; i < arr.length; i++) {
      if(i = 0) {
@@ -22,6 +22,6 @@ class Formatter {
        res.push(this.capitalize(arr[i]))
      }
    }
-    return res.join(' ')
+    return res.join(' ');
  }
  }
